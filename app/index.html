@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="./node_modules/jquery-autocompleter/src/jquery.autocompleter.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="myTabs">
+                  <li class="active"><a href="#insert" data-toggle="tab">插入</a></li>
+                  <li><a href="#list" data-toggle="tab">列表</a></li>
+                  <li><a href="#random" data-toggle="tab">随机</a></li>
+                </ul>
+              
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="insert">
+                    <form class="insert-form">
+                        <div class="form-group">
+                          <label for="word">单词</label>
+                          <input type="text" class="form-control" id="word" placeholder="">
+                        </div>
+                        <div class="form-group">
+                          <label for="wordcn">释义</label>
+                          <input type="text" class="form-control" id="wordcn" placeholder="">
+                        </div>
+                        <div class="form-group">
+                          <label for="example">例句</label>
+                          <input type="text" class="form-control" id="example" placeholder="">
+                        </div>
+                        <div class="form-group">
+                          <label for="example">中文例句</label>
+                          <input type="text" class="form-control" id="examplecn" placeholder="">
+                        </div>
+                        <button type="button" class="btn btn-default" id="btn-add">添加</button>
+                      </form>
+                  </div>
+                  <div class="tab-pane" id="list">
+                    <div class="field">
+                        <input type="text" id="inp-word">
+                    </div>
+                    <div class="example-box">
+                        <div class="example"></div>
+                        <div class="example-cn"></div>
+                        <button type="button" class="btn btn-danger" id="btn-delete">删除</button>
+                        <span class="idstr">(<span class="val"></span>)</span>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="random">
+                    <div class="top">
+                      <button type="button" class="btn btn-success" id="btn-random">随机</button>
+                      <span class="ck-box">
+                        <label>
+                          <input type="checkbox" class="ck-word"> 英文
+                        </label>
+                        <label>
+                          <input type="checkbox" class="ck-wordcn"> 中文
+                        </label>
+                        <label>
+                          <input type="checkbox" class="ck-example"> 英文例句
+                        </label>
+                        <label>
+                          <input type="checkbox" class="ck-examplecn"> 中文例句
+                        </label>
+                      </span>
+                    </div>
+                    <div class="bottom">
+                      <div class="word"></div>
+                      <div class="wordcn"></div>
+                      <div class="example"></div>
+                      <div class="examplecn"></div>  
+                      <div class="en-input">
+                        <input type="text" class="form-control">
+                      </div>                    
+                    </div>
+                  </div>
+                </div>
+              
+              </div>            
+        </div>
+        <script>
+            if (!window.require) window.require = parent.require
+        </script>
+        <script>window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.js");</script>
+        <!-- <script src="./libs/jquery.js"></script> -->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="./node_modules/jquery-autocompleter/src/jquery.autocompleter.js"></script>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

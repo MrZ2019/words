@@ -12,9 +12,14 @@ Object.assign({
 }, settings)
 
 var wordIndex
+var APP
+var WORD_LIST
+entryApp()
+
 entryInsert()
 entryList()
 entryRandom()
+
 
 
 function entryInsert() {
@@ -28,7 +33,7 @@ function entryInsert() {
     })
     
 
-    $('#myTabs li:eq(1) a').tab('show')
+    $('#myTabs li:eq(3) a').tab('show')
 
     $('#btn-add').on('click', () => {
         var word = $('#word').val()
@@ -85,7 +90,11 @@ function entryList() {
         return result
     }
 
-    const newArr = convert(DATA)
+    const newArr = WORD_LIST = convert(DATA)
+    WORD_LIST = WORD_LIST.sort((a, b) => {
+        return a.value > b.value
+    })
+    APP.$data.WORD_LIST = WORD_LIST
 
     $('#inp-word').autocompleter({
         // marker for autocomplete matches
@@ -147,4 +156,15 @@ function entryRandom() {
     })
 
 
+}
+
+function entryApp() {
+    APP = new Vue({
+        el: '#app',
+        data() {
+            return {
+                WORD_LIST: []
+            }
+        }
+    })
 }

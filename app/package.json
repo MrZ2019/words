@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "jquery": "^3.7.1",
-    "jquery-autocompleter": "^0.3.0"
+    "jquery-autocompleter": "^0.3.0",
+    "vue": "^2.7.16"
   }
 }

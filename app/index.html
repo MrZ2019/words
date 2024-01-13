@@ -13,6 +13,7 @@
                   <li class="active"><a href="#insert" data-toggle="tab">插入</a></li>
                   <li><a href="#list" data-toggle="tab">列表</a></li>
                   <li><a href="#random" data-toggle="tab">随机</a></li>
+                  <li><a href="#dict" data-toggle="tab">目录</a></li>
                 </ul>
               
                 <!-- Tab panes -->
@@ -77,6 +78,15 @@
                       </div>                    
                     </div>
                   </div>
+
+                  <div class="tab-pane" id="dict">
+                    <div class="rows">
+                      <div class="row" v-for="word in WORD_LIST">
+                        <span class="word">{{word.value}}</span>
+                        <span class="wordcn">{{word.wordcn}}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               
               </div>            
@@ -88,6 +98,7 @@
         <!-- <script src="./libs/jquery.js"></script> -->
         <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script src="./node_modules/jquery-autocompleter/src/jquery.autocompleter.js"></script>
+        <script src="./node_modules/vue/dist/vue.min.js"></script>
 
         <script src="./script.js"></script>
     </body>

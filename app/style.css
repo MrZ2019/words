@@ -56,3 +56,30 @@
 .en-input {
     display: none;
 }
+
+/* dict */
+
+
+#dict .rows {
+    margin: 24px;
+    line-height: 32px;
+}
+
+#dict .rows .word {
+    margin: 0 24px 0 0;
+}
+
+#dict .rows .row {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+#dict .rows .row:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+#dict .rows .row:hover {
+    background: #eee;
+}
